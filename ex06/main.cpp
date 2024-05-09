@@ -15,7 +15,7 @@ int main(int ac, char** av) {
     size_t index = map_index.get_value(av[1]);
     std::cout << std::endl;
     switch (index) {
-        default: std::cout << "non-existent level: " << av[1] << "\n" << std::endl; break;
+        default: std::cerr << "non-existent level: " << av[1] << "\n" << std::endl; break;
         case 1:
             std::cout << "[ DEBUG ]" << std::endl;
             harl.complain("DEBUG");

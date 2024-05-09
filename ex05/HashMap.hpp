@@ -32,7 +32,7 @@ public:
     ValueType get_value(std::string key) {
         size_t index = compute_hash(key);
         if (!buckets[index] || buckets[index]->first != key) {
-            std::cout << "Key error: " << key << std::endl;
+            std::cerr << "Key error: " << key << std::endl;
             return 0;
         } else {
             return buckets[index]->second;
