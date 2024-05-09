@@ -1,6 +1,6 @@
 NAME = references
 
-SRC = main.cpp
+SRC = main.cpp colors.cpp
 OBJ = $(SRC:.cpp=.o)
 DEPS = $(SRC:.cpp=.d)
 

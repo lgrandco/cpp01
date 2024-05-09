@@ -1,6 +1,7 @@
 #ifndef ZOMBIE_HPP
 #define ZOMBIE_HPP
 
+#include "colors.hpp"
 #include <iostream>
 
 class Zombie {

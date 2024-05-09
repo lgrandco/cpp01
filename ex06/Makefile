@@ -1,6 +1,6 @@
 NAME = harl
 
-SRC = main.cpp Harl.cpp
+SRC = main.cpp Harl.cpp colors.cpp
 OBJ = $(SRC:.cpp=.o)
 DEPS = $(SRC:.cpp=.d)
 

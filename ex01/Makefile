@@ -1,6 +1,6 @@
 NAME = zombieHorde
 
-SRC = main.cpp zombieHorde.cpp Zombie.cpp
+SRC = main.cpp zombieHorde.cpp Zombie.cpp colors.cpp
 OBJ = $(SRC:.cpp=.o)
 DEPS = $(SRC:.cpp=.d)
 

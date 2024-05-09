@@ -1,6 +1,7 @@
 #ifndef WEAPON_HPP
 #define WEAPON_HPP
 
+#include "colors.hpp"
 #include <iostream>
 
 class Weapon {

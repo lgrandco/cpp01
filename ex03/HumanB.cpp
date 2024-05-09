@@ -5,9 +5,8 @@ HumanB::HumanB(std::string name) { this->name = name; }
 void HumanB::setWeapon(Weapon& weapon) { this->weapon = &weapon; }
 
 void HumanB::attack() {
-    if (this->weapon == NULL)
-        std::cout << this->name << " cannot attack wihout weapon" << std::endl;
-    else std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
+    if (this->weapon == NULL) print_color(this->name + " cannot attack without weapon");
+    else print_color(this->name + " attacks with their " + this->weapon->getType());
 }
 
-HumanB::~HumanB() { std::cout << this->name << " died" << std::endl; }
+HumanB::~HumanB() { print_color(this->name + " died"); }

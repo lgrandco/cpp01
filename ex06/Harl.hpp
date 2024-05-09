@@ -2,6 +2,7 @@
 #define HARL_HPP
 
 #include "HashMap.hpp"
+#include "colors.hpp"
 
 class Harl {
 private:
@@ -18,4 +19,3 @@ public:
 };
 
 #endif
-

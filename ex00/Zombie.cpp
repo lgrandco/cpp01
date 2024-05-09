@@ -1,5 +1,5 @@
 #include "Zombie.hpp"
 
 Zombie::Zombie(std::string name) : name(name) {}
-Zombie::~Zombie() { std::cout << name << " died" << std::endl; }
-void Zombie::announce() { std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl; }
+Zombie::~Zombie() { print_color(name + " died"); }
+void Zombie::announce() { print_color(name + " BraiiiiiiinnnzzzZ..."); }
