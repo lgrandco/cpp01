@@ -1,6 +1,6 @@
-NAME = zombieHorde
+NAME = harl
 
-SRC = main.cpp zombieHorde.cpp Zombie.cpp
+SRC = main.cpp Harl.cpp
 OBJ = $(SRC:.cpp=.o)
 DEPS = $(SRC:.cpp=.d)
 
@@ -16,8 +16,6 @@ all : $(NAME)
 
 $(NAME) : ${OBJ} Makefile
 	$(CXX) $(CXXFLAGS) -o $(NAME) -g3 $(OBJ)
-
-bonus: $(NAME)
 
 clean :
 	$(RM) $(NAME) $(OBJ) $(DEPS)

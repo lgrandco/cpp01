@@ -6,6 +6,8 @@
 
 #define TABLE_SIZE 26
 
+class Harl;
+
 template <typename ValueType>
 class HashMap {
 private:

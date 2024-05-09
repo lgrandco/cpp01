@@ -1,30 +1,31 @@
 NAME = references
 
 SRC = main.cpp
-
 OBJ = $(SRC:.cpp=.o)
+DEPS = $(SRC:.cpp=.d)
 
-CC = c++
+CC = cc
+CXX = c++
 
-CFLAGS = -g3 -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -MMD -MP
+CXXFLAGS = $(CFLAGS) --std=c++98
 
 RM = rm -f
 
 all : $(NAME)
 
-.cpp.o:
-	$(CC) $(CFLAGS) -c $< -o $(<:.cpp=.o)
-
-$(NAME) : $(LIBFT) ${OBJ} Makefile
-	$(CC) $(CFLAGS) -o $(NAME) -g3 $(OBJ)
+$(NAME) : ${OBJ} Makefile
+	$(CXX) $(CXXFLAGS) -o $(NAME) -g3 $(OBJ)
 
 bonus: $(NAME)
 
 clean :
-	$(RM) $(NAME) $(OBJ)
+	$(RM) $(NAME) $(OBJ) $(DEPS)
 
 fclean : clean
 	$(RM) $(NAME)
+
+-include $(DEPS)
 
 re : fclean all
 
